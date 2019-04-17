@@ -23,6 +23,7 @@ variable "aws_ubuntu_instance" {
   description = "AWS Ubuntu AMI."
   default     = "ami-43a15f3e"
 }
+
 variable "aws_instance_type" {
   description = "AWS instance type."
   default     = "t2.micro"
