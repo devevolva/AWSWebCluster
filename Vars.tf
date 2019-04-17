@@ -4,7 +4,8 @@
 #
 ###############################################################################
 
-# VPC CIDR BLOCKS
+###############################################################################
+# VPC CIDR BLOCKS #############################################################
 variable "vpc_main_cidr_block" {
     description = "Main VPC CIDR block."
     default     = "192.168.0.0/16"
@@ -16,20 +17,30 @@ variable "secondary_cidr_blocks" {
 }
 
 
+###############################################################################
+# SERVER ######################################################################
+variable "aws_ubuntu_instance" {
+  description = "AWS Ubuntu AMI."
+  default     = "ami-43a15f3e"
+}
+variable "aws_instance_type" {
+  description = "AWS instance type."
+  default     = "t2.micro"
+}
 
-# SERVER PORTS
 variable "server_http_port" {
   description = "Server HTTP port."
   default     = 8080
 }
 
 
-# DATASOURCES
+###############################################################################
+# DATASOURCES #################################################################
 data "aws_availability_zones" "all" {}
 
 
-
-# R53 "A" RECORD
+###############################################################################
+# R53 "A" RECORD ##############################################################
 variable "r53_zone_id" {
     description = "Existing Route53 hosted zone id."
     default     = "Z32HEQVAQX766V"
