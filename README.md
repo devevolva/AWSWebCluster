@@ -17,4 +17,4 @@ name and route web traffic to ELB utilizing R53.
 <br />
 
 #### Requirement
-Assumes existence of Route53 hosted zone for dns name.
+:warning: Assumes existence of Route53 hosted zone for dns name.
